@@ -46,6 +46,37 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SAM_Stat.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SAM_Stat.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -72,6 +103,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cb.Designer.vb" />
+    <Compile Include="cb.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckBox.Designer.vb" />
+    <Compile Include="CheckBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cigar.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +119,18 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Get_Double.Designer.vb" />
+    <Compile Include="Get_Double.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Get_Integer.Designer.vb" />
+    <Compile Include="Get_Integer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Headers.vb" />
+    <Compile Include="Import.vb" />
+    <Compile Include="Input_Description.vb" />
+    <Compile Include="loci.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -94,14 +146,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NUmber.vb" />
+    <Compile Include="OK_Cancel.Designer.vb" />
+    <Compile Include="OK_Cancel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Own_Al.vb" />
+    <Compile Include="Set_Console_Properties.Designer.vb" />
+    <Compile Include="Set_Console_Properties.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stat.vb" />
+    <Compile Include="Stat_Setting.vb" />
+    <Compile Include="Text.vb" />
+    <Compile Include="Util_Helper.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="cb.resx" />
+    <EmbeddedResource Include="CheckBox.resx" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Get_Double.resx" />
+    <EmbeddedResource Include="Get_Integer.resx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OK_Cancel.resx" />
+    <EmbeddedResource Include="Set_Console_Properties.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -114,6 +189,16 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FVI\bio-master\src\Source\Framework\Bio.Core\Bio.Core.csproj">
+      <Project>{DFB9C4E2-C98C-4401-A650-756ABAB52663}</Project>
+      <Name>Bio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FVI\bio-master\src\Source\Framework\Shims\Bio.Platform.Helpers.Desktop\Bio.Platform.Helpers.Desktop.csproj">
+      <Project>{2a6bb04d-047f-4f04-9afb-9bf8941a292a}</Project>
+      <Name>Bio.Platform.Helpers.Desktop</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
