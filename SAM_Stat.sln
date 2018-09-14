@@ -15,6 +15,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bio.Core", "Bio.Core\Bio.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bio.Platform.Helpers", "Bio.Platform.Helpers\Bio.Platform.Helpers.csproj", "{83CBB611-4049-456A-B87B-0B2CFC4797FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{5942B94E-F53F-4903-95AD-CAC40D831FE1}"
+	ProjectSection(SolutionItems) = preProject
+		Sam_Stat_Setup\SAM_Stat.application = Sam_Stat_Setup\SAM_Stat.application
+		Sam_Stat_Setup\setup.exe = Sam_Stat_Setup\setup.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application FIles", "Application FIles", "{68747295-32B2-4037-AAF6-512A81D5B615}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SAM_Stat_1_0_0_2", "SAM_Stat_1_0_0_2", "{92AD7113-A35B-4719-81C1-800CCA8D22C4}"
+	ProjectSection(SolutionItems) = preProject
+		Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\Bio.Core.dll.deploy = Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\Bio.Core.dll.deploy
+		Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\Bio.Platform.Helpers.dll.deploy = Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\Bio.Platform.Helpers.dll.deploy
+		Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.application = Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.application
+		Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.exe.config.deploy = Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.exe.config.deploy
+		Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.exe.deploy = Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.exe.deploy
+		Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.exe.manifest = Sam_Stat_Setup\Application Files\SAM_Stat_1_0_0_2\SAM_Stat.exe.manifest
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +82,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68747295-32B2-4037-AAF6-512A81D5B615} = {5942B94E-F53F-4903-95AD-CAC40D831FE1}
+		{92AD7113-A35B-4719-81C1-800CCA8D22C4} = {68747295-32B2-4037-AAF6-512A81D5B615}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A155FF2F-00F9-4E26-B3FD-5EB61372FD6F}
