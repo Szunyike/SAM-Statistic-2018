@@ -23,7 +23,7 @@ namespace Bio
         {
             get
             {
-                return services.Value;
+                //return services.Value;
             }
         }
     }
