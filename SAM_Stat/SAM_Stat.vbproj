@@ -191,13 +191,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FVI\bio-master\src\Source\Framework\Bio.Core\Bio.Core.csproj">
-      <Project>{DFB9C4E2-C98C-4401-A650-756ABAB52663}</Project>
+    <ProjectReference Include="..\Bio.Core\Bio.Core.csproj">
+      <Project>{dfb9c4e2-c98c-4401-a650-756abab52663}</Project>
       <Name>Bio.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FVI\bio-master\src\Source\Framework\Shims\Bio.Platform.Helpers.Desktop\Bio.Platform.Helpers.Desktop.csproj">
-      <Project>{2a6bb04d-047f-4f04-9afb-9bf8941a292a}</Project>
-      <Name>Bio.Platform.Helpers.Desktop</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
